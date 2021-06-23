@@ -118,7 +118,7 @@ src
 | Forms    |    H     |     3 hrs      |     
 | API calls |    H     |     4 hrs      |    
 | Routes    |    H     |     3 hrs      |     
-| CSS |    H     |     8 hrs      |     1 hrs   
+| CSS |    H     |     8 hrs      |      
 | TOTAL               |   H       |     40 hrs      |     TBD    |     TBD     |
 
 
