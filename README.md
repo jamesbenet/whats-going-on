@@ -119,7 +119,7 @@ src
 | API calls |    H     |     4 hrs      |    
 | Routes    |    H     |     3 hrs      |     
 | CSS |    H     |     8 hrs      |     1 hrs   
-| TOTAL               |   40 hrs       |     6 hrs      |     3 hrs     |     TBD     |
+| TOTAL               |   40 hrs       |     6 hrs      |     TBD    |     TBD     |
 
 
 <br>
