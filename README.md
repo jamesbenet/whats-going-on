@@ -1,6 +1,6 @@
 #  <!-- omit in toc -->
 
-> What's Up? 
+> What's Going On
 >
 
 - [Overview](#overview)
@@ -20,9 +20,9 @@
 
 <br>
 
-## What's Up?
+## What's Going On
 
-_**What's Up?** is an event manager and social app that allows users to view and search for events and allows authenticated users to create and comment on upcoming events.
+_**What's Going On** is an event manager and social app that allows users to view and search for events and allows authenticated users to create and comment on upcoming events.
 
 
 <br>
