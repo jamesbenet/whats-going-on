@@ -64,7 +64,7 @@ _**What's Up?** is an event manager and social app that allows users to view and
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Figma](https://www.figma.com/file/nkVIX5ZNd9jrUPtFDNlrDg/Untitled?node-id=0%3A1)
+[Figma](https://www.figma.com/file/nkVIX5ZNd9jrUPtFDNlrDg/Untitled?node-id=0%3A1)
 
 
 #### Component Tree
