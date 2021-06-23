@@ -12,10 +12,8 @@ class CreateEvents < ActiveRecord::Migration[6.1]
       t.string :performer_name
       t.string :performer_info
       t.string :performer_img_url
-      t.string :performer_website
-      t.string :performer_img_url
       t.string :performer_url
-
+      t.references :user, null: false, foreign_key: true
       t.timestamps
     end
   end
