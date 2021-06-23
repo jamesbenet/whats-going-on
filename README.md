@@ -139,7 +139,9 @@ src
 
 -add some more features/functionality, such as showing User initial in top right (like Google)
   -more complexes searches
--allow comments on comments
+  -allow comments on comments
+  -allow likes on comments
+-use an external API for more robust search results and performer information (song/video links)
 
 
 
