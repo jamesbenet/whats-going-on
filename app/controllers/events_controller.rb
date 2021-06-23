@@ -1,5 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :update, :destroy]
+  # user needs to be logged in to perform these methods
+  before_action :authorized_request, only [:create, :update, :destroy]
 
   # GET /events
   def index
@@ -10,15 +12,21 @@ class EventsController < ApplicationController
 
   # GET /events/1
   def show
-    render json: @event
+    # this way i can avoid a loop within a loop which would happen
+    # above if mapping through all the events and then mapping 
+    # through each events comments, I include the comments here
+    render json: @event, include: :comments
   end
 
   # POST /events
   def create
     @event = Event.new(event_params)
+    # associates event with user who created it
+    # it's also a more secure way to accept form data
+    @event.user = @current_user
 
     if @event.save
-      render json: @event, status: :created,
+      render json: @event, status: :created
     else
       render json: @event.errors, status: :unprocessable_entity
     end
