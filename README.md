@@ -137,6 +137,10 @@ src
 
 ## Post-MVP
 
+-add some more features/functionality, such as showing User initial in top right (like Google)
+  -more complexes searches
+-allow comments on comments
+
 
 
 ***
