@@ -25,7 +25,8 @@ export const deleteEvent= async (id) => {
 	return resp;
 };
 
-export const addEvent = async (eventId, commentId) => {
-	const resp = await api.put(`/comments/${commentId}/events/${eventId}`);
-	return resp.data;
-};
+// CUSTOM
+// export const addEvent = async (eventId, commentId) => {
+// 	const resp = await api.put(`/comments/${commentId}/events/${eventId}`);
+// 	return resp.data;
+// };
