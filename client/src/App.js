@@ -2,7 +2,7 @@ import './App.css';
 import Layout from './layouts/Layout'
 import Login from './screens/Login';
 import Register from './screens/Register';
-// import MainContainer from './containers/MainContainer';
+import MainContainer from './containers/MainContainer';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import { useState , useEffect } from 'react';
 import {
@@ -57,7 +57,7 @@ function App() {
             </Route>
 
             <Route path="/">
-            {/* <MainContainer currentUser={currentUser} /> */}
+              <MainContainer currentUser={currentUser} />
             </Route>
             
           </Switch>

@@ -1,3 +1,4 @@
+import './Layout.css'
 import { Link } from 'react-router-dom'
 
 
@@ -15,13 +16,12 @@ export default function Layout(props) {
 				) : (
         <Link to='/login'>Login/Register</Link>
         )}
-        <hr />
+        
         {
           currentUser && 
           <>
-            <h3>Display About, Events and Performers links here</h3>
-            {/* <Link to='/events'>Events</Link>
-            <Link to='/performers'>Performers</Link> */}
+            <Link to='/events'>Events</Link>
+            {/* <Link to='/performers'>Performers</Link>  */}
           </>
         }
       </header>
