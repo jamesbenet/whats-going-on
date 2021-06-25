@@ -11,8 +11,6 @@ export default function Register(props) {
 
   const { username, email, password } = formData
   const { handleRegister } = props;
-
-  // const { handleLogin } = props
   
   const handleChange = (e) => {
   const { name, value } = e.target;
