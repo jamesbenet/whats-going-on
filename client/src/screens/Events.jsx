@@ -10,12 +10,12 @@ export default function Events(props) {
 			{events.map((event) => (
 				<Fragment key={event.id}>
 					<Link to={`/events/${event.id}`}>
-						<p>{event.event_name}</p>
+						<p>{event.performer_name}</p>
 					</Link>
 				</Fragment>
 			))}
 			<br />
-			<Link to='/event/new'>
+			<Link to='/events/new'>
 				<button>Create</button>
 			</Link>
 		</div>

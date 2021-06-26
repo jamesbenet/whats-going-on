@@ -33,11 +33,11 @@ export default function EventCreate(props) {
 		>
 			<h3>Add a new, upcoming event:</h3>
 			<label>
-				Name:
+				Performer Name:
 				<input type='text' placeholder='Performer' name='performer_name' value={performer_name} onChange={handleChange} />
       </label>
       <label>
-				Name:
+				Performer image:
 				<input type='text' name='performer_img_url' value={performer_img_url} onChange={handleChange} />
       </label>
       <label>

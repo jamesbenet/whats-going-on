@@ -32,12 +32,13 @@ export default function MainContainer() {
     <div>
       <h4>(this is main container)</h4>
       <Switch>
-      <Route path='/events/:id'>
-          <EventDetail events={events} />     
-        </Route>
       <Route path='/events/new'>
 				<EventCreate handleCreate={handleCreate} />
 			</Route>  
+      <Route path='/events/:id'>
+          <EventDetail events={events} />     
+        </Route>
+      
       <Route path='/events'>
 					<Events events={events} />
       </Route>

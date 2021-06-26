@@ -1802,3 +1802,387 @@ Completed 200 OK in 96ms (Views: 96.0ms | ActiveRecord: 69.2ms | Allocations: 49
 Completed 200 OK in 104ms (Views: 0.2ms | ActiveRecord: 60.2ms | Allocations: 6427)
 
 
+Started GET "/events" for ::1 at 2021-06-26 14:31:21 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-26 14:31:21 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 403)
+
+
+  [1m[36mEvent Load (4.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 44ms (Views: 19.2ms | ActiveRecord: 18.4ms | Allocations: 14633)
+
+
+Started POST "/auth/login" for ::1 at 2021-06-26 14:31:25 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 332ms (Views: 0.2ms | ActiveRecord: 8.2ms | Allocations: 5986)
+
+
+Started GET "/events" for ::1 at 2021-06-26 14:31:26 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1121)
+
+
+Started GET "/events/2" for ::1 at 2021-06-26 14:31:48 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (2.9ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:52:in `set_event'
+  [1m[36mComment Load (2.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = $1[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:18:in `show'
+Completed 200 OK in 49ms (Views: 33.8ms | ActiveRecord: 10.4ms | Allocations: 7517)
+
+
+Started GET "/events/1" for ::1 at 2021-06-26 14:31:53 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:52:in `set_event'
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = $1[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:18:in `show'
+Completed 200 OK in 12ms (Views: 6.5ms | ActiveRecord: 1.1ms | Allocations: 1497)
+
+
+Started GET "/events/1" for ::1 at 2021-06-26 14:34:20 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:52:in `set_event'
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = $1[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:18:in `show'
+Completed 200 OK in 28ms (Views: 8.5ms | ActiveRecord: 2.0ms | Allocations: 1494)
+
+
+Started GET "/events" for ::1 at 2021-06-26 14:35:30 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (2.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 2.4ms | Allocations: 1120)
+
+
+Started GET "/events" for ::1 at 2021-06-26 14:35:31 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.1ms | Allocations: 1119)
+
+
+Started GET "/events" for ::1 at 2021-06-26 14:36:46 -0400
+Processing by EventsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-06-26 14:36:46 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mEvent Load (19.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 32ms (Views: 5.9ms | ActiveRecord: 19.1ms | Allocations: 1930)
+
+
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 100ms (Views: 0.6ms | ActiveRecord: 43.1ms | Allocations: 4171)
+
+
+Started GET "/events/2" for ::1 at 2021-06-26 14:36:49 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (3.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:52:in `set_event'
+  [1m[36mComment Load (1.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = $1[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:18:in `show'
+Completed 200 OK in 20ms (Views: 10.4ms | ActiveRecord: 4.7ms | Allocations: 1577)
+
+
+Started POST "/events" for ::1 at 2021-06-26 14:39:34 -0400
+Processing by EventsController#create as HTML
+  Parameters: {"event"=>{"performer_name"=>"james", "performer_img_url"=>"https://static01.nyt.com/images/2020/12/07/arts/07pubdeal/merlin_113084147_1eedac8e-75ad-44aa-bbe8-3b2bfdfadcea-jumbo.jpg?quality=90&auto=webp", "venue_name"=>"cbgb", "venue_location"=>"ny,ny", "event_url"=>"https://static01.nyt.com/images/2020/12/07/arts/07pubdeal/merlin_113084147_1eedac8e-75ad-44aa-bbe8-3b2bfdfadcea-jumbo.jpg?quality=90&auto=webp"}}
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms | Allocations: 1718)
+
+
+  
+NoMethodError (undefined method `authorized_request' for #<EventsController:0x00000000005078>
+Did you mean?  authorize_request):
+  
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (6.1.3.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:105:in `run_callbacks'
+actionpack (6.1.3.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.3.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.3.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.3.2) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.3.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.3.2) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.3.2) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.3.2) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.3.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.3.2) lib/abstract_controller/base.rb:165:in `process'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started POST "/events" for ::1 at 2021-06-26 14:39:39 -0400
+Processing by EventsController#create as HTML
+  Parameters: {"event"=>{"performer_name"=>"james", "performer_img_url"=>"https://static01.nyt.com/images/2020/12/07/arts/07pubdeal/merlin_113084147_1eedac8e-75ad-44aa-bbe8-3b2bfdfadcea-jumbo.jpg?quality=90&auto=webp", "venue_name"=>"cbgb", "venue_location"=>"ny,ny", "event_url"=>"https://static01.nyt.com/images/2020/12/07/arts/07pubdeal/merlin_113084147_1eedac8e-75ad-44aa-bbe8-3b2bfdfadcea-jumbo.jpg?quality=90&auto=webp"}}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 1670)
+
+
+  
+NoMethodError (undefined method `authorized_request' for #<EventsController:0x000000000052f8>
+Did you mean?  authorize_request):
+  
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (6.1.3.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:105:in `run_callbacks'
+actionpack (6.1.3.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.3.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.3.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.3.2) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.3.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.3.2) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.3.2) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.3.2) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.3.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.3.2) lib/abstract_controller/base.rb:165:in `process'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started POST "/events" for ::1 at 2021-06-26 14:40:25 -0400
+Processing by EventsController#create as HTML
+  Parameters: {"event"=>{"performer_name"=>"james", "performer_img_url"=>"https://static01.nyt.com/images/2020/12/07/arts/07pubdeal/merlin_113084147_1eedac8e-75ad-44aa-bbe8-3b2bfdfadcea-jumbo.jpg?quality=90&auto=webp", "venue_name"=>"cbgb", "venue_location"=>"ny,ny", "event_url"=>"https://static01.nyt.com/images/2020/12/07/arts/07pubdeal/merlin_113084147_1eedac8e-75ad-44aa-bbe8-3b2bfdfadcea-jumbo.jpg?quality=90&auto=webp"}}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 1670)
+
+
+  
+NoMethodError (undefined method `authorized_request' for #<EventsController:0x00000000005488>
+Did you mean?  authorize_request):
+  
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (6.1.3.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:105:in `run_callbacks'
+actionpack (6.1.3.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.3.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.3.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.3.2) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.3.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.3.2) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.3.2) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.3.2) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.3.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.3.2) lib/abstract_controller/base.rb:165:in `process'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started POST "/events" for ::1 at 2021-06-26 14:41:05 -0400
+Processing by EventsController#create as HTML
+  Parameters: {"event"=>{"performer_name"=>"james", "performer_img_url"=>"https://static01.nyt.com/images/2020/12/07/arts/07pubdeal/merlin_113084147_1eedac8e-75ad-44aa-bbe8-3b2bfdfadcea-jumbo.jpg?quality=90&auto=webp", "venue_name"=>"cbgb", "venue_location"=>"ny,ny", "event_url"=>"https://static01.nyt.com/images/2020/12/07/arts/07pubdeal/merlin_113084147_1eedac8e-75ad-44aa-bbe8-3b2bfdfadcea-jumbo.jpg?quality=90&auto=webp"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:28:in `create'
+  [1m[36mEvent Create (31.6ms)[0m  [1m[32mINSERT INTO "events" ("event_url", "venue_name", "venue_location", "performer_name", "performer_img_url", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["event_url", "https://static01.nyt.com/images/2020/12/07/arts/07pubdeal/merlin_113084147_1eedac8e-75ad-44aa-bbe8-3b2bfdfadcea-jumbo.jpg?quality=90&auto=webp"], ["venue_name", "cbgb"], ["venue_location", "ny,ny"], ["performer_name", "james"], ["performer_img_url", "https://static01.nyt.com/images/2020/12/07/arts/07pubdeal/merlin_113084147_1eedac8e-75ad-44aa-bbe8-3b2bfdfadcea-jumbo.jpg?quality=90&auto=webp"], ["created_at", "2021-06-26 18:41:05.390316"], ["updated_at", "2021-06-26 18:41:05.390316"], ["user_id", 2]]
+  ↳ app/controllers/events_controller.rb:28:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:28:in `create'
+Completed 201 Created in 102ms (Views: 0.6ms | ActiveRecord: 67.0ms | Allocations: 14919)
+
+
+Started GET "/events" for ::1 at 2021-06-26 14:41:18 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (2.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 2.0ms | Allocations: 1766)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-26 14:41:18 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (46.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 125ms (Views: 0.3ms | ActiveRecord: 46.1ms | Allocations: 831)
+
+
+Started POST "/events" for ::1 at 2021-06-26 14:44:18 -0400
+Processing by EventsController#create as HTML
+  Parameters: {"event"=>{"performer_name"=>"werwer", "performer_img_url"=>"https://static01.nyt.com/images/2020/12/07/arts/07pubdeal/merlin_113084147_1eedac8e-75ad-44aa-bbe8-3b2bfdfadcea-jumbo.jpg?quality=90&auto=webp", "venue_name"=>"ewewr", "venue_location"=>"dfdwf", "event_url"=>"https://static01.nyt.com/images/2020/12/07/arts/07pubdeal/merlin_113084147_1eedac8e-75ad-44aa-bbe8-3b2bfdfadcea-jumbo.jpg?quality=90&auto=webp"}}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:28:in `create'
+  [1m[36mEvent Create (11.7ms)[0m  [1m[32mINSERT INTO "events" ("event_url", "venue_name", "venue_location", "performer_name", "performer_img_url", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["event_url", "https://static01.nyt.com/images/2020/12/07/arts/07pubdeal/merlin_113084147_1eedac8e-75ad-44aa-bbe8-3b2bfdfadcea-jumbo.jpg?quality=90&auto=webp"], ["venue_name", "ewewr"], ["venue_location", "dfdwf"], ["performer_name", "werwer"], ["performer_img_url", "https://static01.nyt.com/images/2020/12/07/arts/07pubdeal/merlin_113084147_1eedac8e-75ad-44aa-bbe8-3b2bfdfadcea-jumbo.jpg?quality=90&auto=webp"], ["created_at", "2021-06-26 18:44:18.046663"], ["updated_at", "2021-06-26 18:44:18.046663"], ["user_id", 2]]
+  ↳ app/controllers/events_controller.rb:28:in `create'
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:28:in `create'
+Completed 201 Created in 43ms (Views: 1.0ms | ActiveRecord: 24.2ms | Allocations: 2662)
+
+
+Started GET "/events" for ::1 at 2021-06-26 14:47:44 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (6.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 16ms (Views: 7.5ms | ActiveRecord: 6.4ms | Allocations: 1474)
+
+
+Started POST "/events" for ::1 at 2021-06-26 14:49:09 -0400
+Processing by EventsController#create as HTML
+  Parameters: {"event"=>{"performer_name"=>"qwrqwr", "performer_img_url"=>"qwrqwr", "venue_name"=>"https://static01.nyt.com/images/2020/12/07/arts/07pubdeal/merlin_113084147_1eedac8e-75ad-44aa-bbe8-3b2bfdfadcea-jumbo.jpg?quality=90&auto=webp", "venue_location"=>"wqrqwr", "event_url"=>"https://static01.nyt.com/images/2020/12/07/arts/07pubdeal/merlin_113084147_1eedac8e-75ad-44aa-bbe8-3b2bfdfadcea-jumbo.jpg?quality=90&auto=webp"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:28:in `create'
+  [1m[36mEvent Create (6.4ms)[0m  [1m[32mINSERT INTO "events" ("event_url", "venue_name", "venue_location", "performer_name", "performer_img_url", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["event_url", "https://static01.nyt.com/images/2020/12/07/arts/07pubdeal/merlin_113084147_1eedac8e-75ad-44aa-bbe8-3b2bfdfadcea-jumbo.jpg?quality=90&auto=webp"], ["venue_name", "https://static01.nyt.com/images/2020/12/07/arts/07pubdeal/merlin_113084147_1eedac8e-75ad-44aa-bbe8-3b2bfdfadcea-jumbo.jpg?quality=90&auto=webp"], ["venue_location", "wqrqwr"], ["performer_name", "qwrqwr"], ["performer_img_url", "qwrqwr"], ["created_at", "2021-06-26 18:49:09.118506"], ["updated_at", "2021-06-26 18:49:09.118506"], ["user_id", 2]]
+  ↳ app/controllers/events_controller.rb:28:in `create'
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:28:in `create'
+Completed 201 Created in 30ms (Views: 0.9ms | ActiveRecord: 12.1ms | Allocations: 2660)
+
+
+Started GET "/events" for ::1 at 2021-06-26 14:50:10 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (5.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 5.6ms | Allocations: 1652)
+
+
+Started GET "/events/4" for ::1 at 2021-06-26 14:56:36 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:52:in `set_event'
+  [1m[36mComment Load (3.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = $1[0m  [["event_id", 4]]
+  ↳ app/controllers/events_controller.rb:18:in `show'
+Completed 200 OK in 179ms (Views: 46.1ms | ActiveRecord: 75.7ms | Allocations: 6020)
+
+
