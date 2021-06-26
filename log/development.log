@@ -1552,3 +1552,253 @@ Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 3.2ms | Allocations: 130
 Completed 200 OK in 185ms (Views: 119.5ms | ActiveRecord: 33.3ms | Allocations: 8541)
 
 
+Started GET "/events/2" for ::1 at 2021-06-26 11:42:46 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:52:in `set_event'
+  [1m[36mComment Load (2.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = $1[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:18:in `show'
+Completed 200 OK in 117ms (Views: 51.2ms | ActiveRecord: 55.2ms | Allocations: 5257)
+
+
+Started GET "/events/2" for ::1 at 2021-06-26 12:24:05 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (6.9ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:52:in `set_event'
+  [1m[36mComment Load (6.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = $1[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:18:in `show'
+Completed 200 OK in 147ms (Views: 7.6ms | ActiveRecord: 52.8ms | Allocations: 3682)
+
+
+Started GET "/events" for ::1 at 2021-06-26 13:41:14 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-26 13:41:14 -0400
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mEvent Load (13.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 402ms (Views: 67.2ms | ActiveRecord: 85.4ms | Allocations: 5728)
+
+
+Completed 200 OK in 467ms (Views: 370.3ms | ActiveRecord: 89.3ms | Allocations: 5639)
+
+
+Started GET "/events" for ::1 at 2021-06-26 13:41:14 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.3ms | Allocations: 1119)
+
+
+Started GET "/events" for ::1 at 2021-06-26 13:41:14 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1119)
+
+
+Started GET "/events" for ::1 at 2021-06-26 13:41:14 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1119)
+
+
+Started GET "/events/1" for ::1 at 2021-06-26 13:41:18 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:52:in `set_event'
+  [1m[36mComment Load (2.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = $1[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:18:in `show'
+Completed 200 OK in 23ms (Views: 15.7ms | ActiveRecord: 3.2ms | Allocations: 1507)
+
+
+Started GET "/events" for ::1 at 2021-06-26 13:43:25 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (10.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 30ms (Views: 18.3ms | ActiveRecord: 10.7ms | Allocations: 1120)
+
+
+Started GET "/events" for ::1 at 2021-06-26 13:43:55 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 1.1ms | Allocations: 1119)
+
+
+Started GET "/events" for ::1 at 2021-06-26 13:43:58 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (10.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 18ms (Views: 7.1ms | ActiveRecord: 10.9ms | Allocations: 1119)
+
+
+Started GET "/events" for ::1 at 2021-06-26 13:44:00 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-26 13:44:00 -0400
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mEvent Load (33.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 46ms (Views: 13.0ms | ActiveRecord: 33.0ms | Allocations: 1459)
+
+
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 50ms (Views: 0.5ms | ActiveRecord: 3.6ms | Allocations: 2011)
+
+
+Started GET "/events" for ::1 at 2021-06-26 13:44:52 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (9.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 14ms (Views: 3.6ms | ActiveRecord: 9.4ms | Allocations: 1119)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-26 13:44:56 -0400
+Started GET "/events" for ::1 at 2021-06-26 13:44:56 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by EventsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mEvent Load (2.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 0.4ms | Allocations: 1077)
+
+
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 2.4ms | Allocations: 1993)
+
+
+Started GET "/events" for ::1 at 2021-06-26 13:45:09 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1119)
+
+
+Started GET "/events" for ::1 at 2021-06-26 13:45:56 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 1.2ms | Allocations: 1119)
+
+
+Started GET "/events" for ::1 at 2021-06-26 13:47:58 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (7.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 21ms (Views: 11.9ms | ActiveRecord: 7.8ms | Allocations: 1119)
+
+
+Started GET "/events" for ::1 at 2021-06-26 13:50:03 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (11.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 23ms (Views: 11.6ms | ActiveRecord: 11.5ms | Allocations: 1119)
+
+
+Started GET "/events" for ::1 at 2021-06-26 13:55:54 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-26 13:55:54 -0400
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mEvent Load (9.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 55ms (Views: 19.8ms | ActiveRecord: 27.3ms | Allocations: 17777)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 57ms (Views: 0.1ms | ActiveRecord: 36.3ms | Allocations: 17280)
+
+
+Started GET "/flavors" for ::1 at 2021-06-26 13:58:50 -0400
+Started GET "/foods" for ::1 at 2021-06-26 13:58:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/flavors"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/foods"):
+  
+Started POST "/auth/login" for ::1 at 2021-06-26 13:59:01 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Loon", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Loon"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 2.8ms | Allocations: 1263)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/auth/login" for ::1 at 2021-06-26 13:59:09 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Loon", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Loon"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.6ms | Allocations: 1029)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/auth/login" for ::1 at 2021-06-26 13:59:19 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"Loon", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Loon"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 4.4ms | Allocations: 1029)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/users/" for ::1 at 2021-06-26 13:59:41 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"juan", "email"=>"juan@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (5.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "juan"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "juan@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (16.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "juan"], ["email", "juan@email.com"], ["password_digest", "$2a$12$mwHbkHov/f0qyKn6JJE.cO/gxtsyteSv86iHf77/7V9IRvbdXCPTS"], ["created_at", "2021-06-26 17:59:41.667516"], ["updated_at", "2021-06-26 17:59:41.667516"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 201 Created in 326ms (Views: 0.2ms | ActiveRecord: 24.4ms | Allocations: 4412)
+
+
+Started GET "/flavors" for ::1 at 2021-06-26 13:59:41 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/flavors"):
+  
+Started GET "/foods" for ::1 at 2021-06-26 13:59:41 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/foods"):
+  
+Started GET "/foods/new" for ::1 at 2021-06-26 14:00:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/foods/new"):
+  
+Started GET "/auth/verify" for ::1 at 2021-06-26 14:06:07 -0400
+Started GET "/events" for ::1 at 2021-06-26 14:06:07 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (9.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 96ms (Views: 96.0ms | ActiveRecord: 69.2ms | Allocations: 4917)
+
+
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 104ms (Views: 0.2ms | ActiveRecord: 60.2ms | Allocations: 6427)
+
+
