@@ -1125,3 +1125,430 @@ Processing by EventsController#index as HTML
 Completed 200 OK in 186ms (Views: 159.2ms | ActiveRecord: 96.9ms | Allocations: 11884)
 
 
+Started GET "/events" for ::1 at 2021-06-25 16:34:20 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-25 16:34:20 -0400
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 403)
+
+
+  [1m[36mEvent Load (9.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 47ms (Views: 20.3ms | ActiveRecord: 19.2ms | Allocations: 15123)
+
+
+Started POST "/auth/login" for ::1 at 2021-06-25 16:34:24 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"reggie4", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "reggie4"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 334ms (Views: 0.2ms | ActiveRecord: 6.7ms | Allocations: 5987)
+
+
+Started GET "/events" for ::1 at 2021-06-25 16:34:25 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1121)
+
+
+Started GET "/events" for ::1 at 2021-06-26 08:45:06 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-26 08:45:06 -0400
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mEvent Load (15.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 295ms (Views: 279.7ms | ActiveRecord: 134.7ms | Allocations: 5675)
+
+
+  [1m[36mUser Load (29.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 268ms (Views: 0.7ms | ActiveRecord: 143.4ms | Allocations: 6008)
+
+
+Started GET "/events" for ::1 at 2021-06-26 08:46:05 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (40.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 243ms (Views: 201.5ms | ActiveRecord: 40.7ms | Allocations: 1119)
+
+
+Started GET "/events" for ::1 at 2021-06-26 08:46:08 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 1119)
+
+
+Started GET "/events" for ::1 at 2021-06-26 08:46:14 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.4ms | Allocations: 1138)
+
+
+Started GET "/events" for ::1 at 2021-06-26 11:08:26 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-26 11:08:26 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mEvent Load (11.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 50ms (Views: 18.1ms | ActiveRecord: 24.5ms | Allocations: 16491)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 60ms (Views: 0.1ms | ActiveRecord: 37.0ms | Allocations: 17253)
+
+
+Started GET "/events" for ::1 at 2021-06-26 11:15:00 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (2.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 24.6ms | Allocations: 3164)
+
+
+Started GET "/events" for ::1 at 2021-06-26 11:15:03 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.8ms | Allocations: 1139)
+
+
+Started POST "/auth/login" for ::1 at 2021-06-26 11:15:18 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"reggie4", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "reggie4"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 311ms (Views: 0.2ms | ActiveRecord: 2.9ms | Allocations: 1081)
+
+
+Started GET "/events" for ::1 at 2021-06-26 11:15:18 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1119)
+
+
+Started GET "/events" for ::1 at 2021-06-26 11:23:36 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 76ms (Views: 73.3ms | ActiveRecord: 26.9ms | Allocations: 3144)
+
+
+Started GET "/events" for ::1 at 2021-06-26 11:32:01 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-26 11:32:01 -0400
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mEvent Load (8.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 268ms (Views: 266.3ms | ActiveRecord: 25.6ms | Allocations: 5290)
+
+
+  [1m[36mUser Load (9.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 267ms (Views: 0.3ms | ActiveRecord: 39.5ms | Allocations: 5863)
+
+
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (8.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (119.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "whats_going_on_development"[0m
+  [1m[35m (43.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "whats_going_on_test"[0m
+  [1m[35m (133.6ms)[0m  [1m[35mCREATE DATABASE "whats_going_on_development" ENCODING = 'unicode'[0m
+  [1m[35m (54.9ms)[0m  [1m[35mCREATE DATABASE "whats_going_on_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (70.3ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "comment" character varying, "event_id" bigint NOT NULL, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE INDEX "index_comments_on_event_id" ON "comments" ("event_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "date" character varying, "event_url" character varying, "event_name" character varying, "venue_name" character varying, "venue_location" character varying, "venue_capacity" character varying, "venue_image_url" character varying, "venue_website" character varying, "performer_name" character varying, "performer_info" character varying, "performer_img_url" character varying, "performer_url" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_events_on_user_id" ON "events" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (8.2ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_c6b77e33aa"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "events" ADD CONSTRAINT "fk_rails_0cb5590091"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210624162432)[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210623163837),
+(20210623170728),
+(20210623170937);
+
+[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-26 15:32:46.975238"], ["updated_at", "2021-06-26 15:32:46.975238"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "631e78013390204429476f8fc0c31d25ebc11a8b"], ["created_at", "2021-06-26 15:32:46.989450"], ["updated_at", "2021-06-26 15:32:46.989450"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (11.6ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "comment" character varying, "event_id" bigint NOT NULL, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE INDEX "index_comments_on_event_id" ON "comments" ("event_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "date" character varying, "event_url" character varying, "event_name" character varying, "venue_name" character varying, "venue_location" character varying, "venue_capacity" character varying, "venue_image_url" character varying, "venue_website" character varying, "performer_name" character varying, "performer_info" character varying, "performer_img_url" character varying, "performer_url" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_events_on_user_id" ON "events" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (6.8ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_c6b77e33aa"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "comments" ADD CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "events" ADD CONSTRAINT "fk_rails_0cb5590091"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210624162432)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210623163837),
+(20210623170728),
+(20210623170937);
+
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-26 15:32:47.120441"], ["updated_at", "2021-06-26 15:32:47.120441"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-06-26 15:32:47.131124"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "631e78013390204429476f8fc0c31d25ebc11a8b"], ["created_at", "2021-06-26 15:32:47.140625"], ["updated_at", "2021-06-26 15:32:47.140625"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Juan"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "loon@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Juan"], ["email", "loon@email.com"], ["password_digest", "$2a$12$4N39fS4PMDoHALRmUZmAxeVsxL6U9VkOR0O7gLGabiCYeHTVkF/N6"], ["created_at", "2021-06-26 15:32:47.542283"], ["updated_at", "2021-06-26 15:32:47.542283"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (7.2ms)[0m  [1m[32mINSERT INTO "events" ("date", "event_url", "event_name", "venue_name", "venue_location", "venue_capacity", "venue_image_url", "venue_website", "performer_name", "performer_info", "performer_img_url", "performer_url", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["date", "10/05/2021"], ["event_url", "https://mc34.com/upcoming/#event=41766013"], ["event_name", "Live Nation Presents Counting Crows"], ["venue_name", "Hammerstein Ballroom"], ["venue_location", "NY,NY"], ["venue_capacity", "3500"], ["venue_image_url", "https://34thstreet-prod.imgix.net/images/34thstreet_uploads/images/Hammerstein_Ballroom.jpg?fit=min&w=1280&h=720"], ["venue_website", "https://mc34.com/events-venue/"], ["performer_name", "Counting Crows"], ["performer_info", "Fresh off the release of their first album in nearly seven years, BUTTER MIRACLE, SUITE ONE,  the legendary Counting Crows today announce the dates for their highly anticipated return to the road with the Butter Miracle tour. Kicking off August 7 at the Hard Rock Atlantic City, the 32-date run will be making stops at major cities across the US including headlining the BeachLife Festival in Redondo Beach, CA before ending October 5 at the Hammerstein Ballroom and the Underwater Sunshine Festival in New York City. Frank Turner, Seán Barna and Matt Sucich are set as support acts for the tour. - countingcrows.com"], ["performer_img_url", "https://portcitydaily.com/wp-content/uploads/2021/05/assets.aboutamazon-copy.jpg"], ["performer_url", "https://www.countingcrows.com/"], ["created_at", "2021-06-26 15:32:47.569188"], ["updated_at", "2021-06-26 15:32:47.569188"], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.8ms)[0m  [1m[32mINSERT INTO "events" ("date", "event_url", "event_name", "venue_name", "venue_location", "venue_capacity", "venue_image_url", "venue_website", "performer_name", "performer_info", "performer_img_url", "performer_url", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["date", "10/08/2021"], ["event_url", "https://www.elsewherebrooklyn.com/events/madlib-8th-oct-elsewhere-the-hall-new-york-tickets"], ["event_name", "Madlib, 16+ show"], ["venue_name", "Elsewhere"], ["venue_location", "Brooklyn,NY"], ["venue_capacity", "675"], ["venue_image_url", "https://www.datocms-assets.com/46309/1619690629-rentals-module.jpg?auto=compress%2Cformat&dpr=0.75"], ["venue_website", "https://www.datocms-assets.com/46309/1619690629-rentals-module.jpg?auto=compress%2Cformat&dpr=0.75"], ["performer_name", "Madlib"], ["performer_info", "Describing himself as \"a DJ first, producer second, and MC last,\" Madlib is the primary alias of Otis Jackson, Jr., who has become one of the most celebrated, prolific, and eclectic artists in hip-hop since emerging on the scene in the early '90s. Also known as Quasimoto, Beat Konducta, and Yesterdays New Quintet, among his dozens of handles, the unique sound and feel of Madlib's work -- created primarily without computers, using old-school recording and sampling gear -- has made him a valued collaborator with a number of leading hip-hop performers, and a widely praised figure in the underground rap community.- allmusic.com"], ["performer_img_url", "https://www.stonesthrow.com/app/uploads/2018/05/madlib-1.jpg"], ["performer_url", "https://www.stonesthrow.com/artist/madlib/"], ["created_at", "2021-06-26 15:32:47.579269"], ["updated_at", "2021-06-26 15:32:47.579269"], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "events"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mComment Create (1.4ms)[0m  [1m[32mINSERT INTO "comments" ("comment", "event_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["comment", "I love the last album!"], ["event_id", 2], ["user_id", 1], ["created_at", "2021-06-26 15:32:47.590715"], ["updated_at", "2021-06-26 15:32:47.590715"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments"[0m
+Started GET "/auth/verify" for ::1 at 2021-06-26 11:33:08 -0400
+Started GET "/events" for ::1 at 2021-06-26 11:33:08 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+Processing by EventsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 17ms (Views: 0.2ms | ActiveRecord: 8.1ms | Allocations: 9148)
+
+
+  [1m[36mEvent Load (21.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 77ms (Views: 35.2ms | ActiveRecord: 36.8ms | Allocations: 17209)
+
+
+Started POST "/auth/login" for ::1 at 2021-06-26 11:33:14 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"reggie4", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "reggie4"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.1ms | Allocations: 1281)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/auth/login" for ::1 at 2021-06-26 11:33:19 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"reggie4", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "reggie4"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.7ms | Allocations: 1047)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/auth/login" for ::1 at 2021-06-26 11:33:23 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"reggie2", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "reggie2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms | Allocations: 1047)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/auth/login" for ::1 at 2021-06-26 11:33:24 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"reggie2", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "reggie2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms | Allocations: 1031)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/auth/login" for ::1 at 2021-06-26 11:33:44 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"juanito", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "juanito"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.6ms | Allocations: 1030)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/auth/login" for ::1 at 2021-06-26 11:33:46 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"juanito", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "juanito"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms | Allocations: 1029)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started GET "/events" for ::1 at 2021-06-26 11:33:56 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 1118)
+
+
+Started POST "/auth/login" for ::1 at 2021-06-26 11:34:02 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"reggie4", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "reggie4"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 1031)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/users/" for ::1 at 2021-06-26 11:34:24 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"jack", "email"=>"jack@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jack@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "jack"], ["email", "jack@email.com"], ["password_digest", "$2a$12$iR2Qtpt8ktbiCGcMcJr2WOPW5dxBxzyMhUKmm6PQ8YfWYAHhSM/HK"], ["created_at", "2021-06-26 15:34:25.107235"], ["updated_at", "2021-06-26 15:34:25.107235"]]
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+Completed 201 Created in 306ms (Views: 0.1ms | ActiveRecord: 3.8ms | Allocations: 6734)
+
+
+Started GET "/events" for ::1 at 2021-06-26 11:34:25 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 1119)
+
+
+Started GET "/events" for ::1 at 2021-06-26 11:35:32 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-26 11:35:32 -0400
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.4ms | Allocations: 1251)
+
+
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 2.6ms | Allocations: 2025)
+
+
+Started GET "/auth/verify" for ::1 at 2021-06-26 11:35:58 -0400
+Started GET "/events" for ::1 at 2021-06-26 11:35:58 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 1486)
+
+
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 1.1ms | Allocations: 1754)
+
+
+Started GET "/events" for ::1 at 2021-06-26 11:37:53 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.6ms | Allocations: 1119)
+
+
+Started GET "/events/1" for ::1 at 2021-06-26 11:37:57 -0400
+Started GET "/events" for ::1 at 2021-06-26 11:37:57 -0400
+Processing by EventsController#show as HTML
+Processing by EventsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (3.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 3.2ms | Allocations: 1309)
+
+
+  [1m[36mEvent Load (7.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:52:in `set_event'
+  [1m[36mComment Load (14.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = $1[0m  [["event_id", 1]]
+  ↳ app/controllers/events_controller.rb:18:in `show'
+Completed 200 OK in 185ms (Views: 119.5ms | ActiveRecord: 33.3ms | Allocations: 8541)
+
+

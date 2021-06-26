@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Events from '../screens/Events';
+import EventDetail from '../screens/EventDetail';
 
 import { getAllEvents } from '../services/events';
 
@@ -19,11 +20,16 @@ export default function MainContainer() {
 	}, []);
   return (
     <div>
-      <h1>Main Con</h1>
+      <h4>(this is main container)</h4>
       <Switch>
+      <Route path='/events/:id'>
+        <EventDetail events={events} />
+			</Route>
       <Route path='/events'>
 					<Events events={events} />
-			</Route>
+      </Route>
+      
+        
       </Switch>
       
     </div>

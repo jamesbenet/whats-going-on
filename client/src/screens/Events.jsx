@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Foods(props) {
+export default function Events(props) {
   const { events } = props
   
 	return (
