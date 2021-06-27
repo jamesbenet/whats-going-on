@@ -20,6 +20,7 @@ export default function Layout(props) {
         {
           currentUser && 
           <>
+            about performers
             <Link to='/events'>Events</Link>
             {/* <Link to='/performers'>Performers</Link>  */}
           </>

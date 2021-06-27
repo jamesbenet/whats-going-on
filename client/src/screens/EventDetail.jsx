@@ -5,22 +5,23 @@ import { getOneEvent, deleteEvent } from "../services/events";
 import { useParams, useHistory, Link } from "react-router-dom";
 
 export default function EventDetail(props) {
-  const [event, setEvent] = useState(null);
-  const [isLoaded, setLoaded] = useState(false);
-  const { id } = useParams();
+  const [event, setEvent] = useState(null)
+  const [isLoaded, setLoaded] = useState(false)
+  const { id } = useParams()
   // const history = useHistory();
+  const { handleDelete } = props
 
   useEffect(() => {
     const fetchEvent = async () => {
-      const event = await getOneEvent(id);
-      setEvent(event);
-      setLoaded(true);
-    };
-    fetchEvent();
-  }, [id]);
+      const event = await getOneEvent(id)
+      setEvent(event)
+      setLoaded(true)
+    }
+    fetchEvent()
+  }, [id])
 
   if (!isLoaded) {
-    return <h1>Loading...</h1>;
+    return <h1>Loading...</h1>
   }
 
   return (
@@ -36,6 +37,13 @@ export default function EventDetail(props) {
           <div className="performer-info">{event.performer_info}</div>
           <div className="venue-location">{event.venue_location}</div>
         </div>
+        <Link to={`/events/${event.id}/edit`}>
+        <button>Edit</button>
+      </Link>
+      <Link to={`/events`} onClick={() => handleDelete(event.id)}>
+        Delete
+      </Link>
+      
       </div>
     // </Layout>
   );

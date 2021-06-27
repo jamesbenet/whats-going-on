@@ -65,5 +65,6 @@ puts "#{User.count} users created"
 puts "#{Event.count} events created"
 
 Comment.create!(comment: 'I love the last album!', user: @user, event: @madlib)
+Comment.create!(comment: 'Have not seen these guys since high school', user: @user, event: @counting_crows)
 
 puts "#{Comment.count} comments created"
