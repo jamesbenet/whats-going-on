@@ -10,7 +10,10 @@ export default function EventDetail(props) {
   const { id } = useParams()
   // const history = useHistory();
   const { handleCommentCreate, handleDelete, comments } = props
-
+  const [formData, setFormData] = useState({
+    comment: "",
+  })
+  const { comment } = formData
   useEffect(() => {
     const fetchEvent = async () => {
       const event = await getOneEvent(id)
@@ -19,6 +22,14 @@ export default function EventDetail(props) {
     }
     fetchEvent()
   }, [id])
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
 
   if (!isLoaded) {
     return <h1>Loading...</h1>

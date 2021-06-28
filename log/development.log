@@ -5315,3 +5315,109 @@ Processing by EventsController#index as HTML
 Completed 200 OK in 126ms (Views: 123.0ms | ActiveRecord: 2.8ms | Allocations: 2002)
 
 
+Started GET "/events" for ::1 at 2021-06-28 12:39:53 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (142.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 3084ms (Views: 3010.2ms | ActiveRecord: 1619.5ms | Allocations: 4068)
+
+
+Started GET "/events" for ::1 at 2021-06-28 12:39:56 -0400
+Processing by EventsController#index as HTML
+Started GET "/comments" for ::1 at 2021-06-28 12:39:56 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/comments"):
+  
+  [1m[36mEvent Load (84.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 131ms (Views: 43.5ms | ActiveRecord: 84.8ms | Allocations: 7945)
+
+
+Started GET "/events" for ::1 at 2021-06-28 12:39:56 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.4ms | Allocations: 2004)
+
+
+Started GET "/events" for ::1 at 2021-06-28 12:39:56 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 29ms (Views: 22.7ms | ActiveRecord: 0.3ms | Allocations: 2632)
+
+
+Started GET "/events" for ::1 at 2021-06-28 12:39:56 -0400
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 2002)
+
+
+Started GET "/events" for ::1 at 2021-06-28 12:40:12 -0400
+Started GET "/comments" for ::1 at 2021-06-28 12:40:12 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-28 12:40:12 -0400
+Processing by EventsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/comments"):
+  
+Processing by AuthenticationController#verify as HTML
+  [1m[36mEvent Load (40.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 126ms (Views: 84.4ms | ActiveRecord: 40.1ms | Allocations: 20458)
+
+
+  [1m[36mUser Load (13.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 209ms (Views: 0.5ms | ActiveRecord: 60.2ms | Allocations: 18881)
+
+
+Started GET "/events/3" for ::1 at 2021-06-28 12:40:13 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:52:in `set_event'
+  [1m[36mComment Load (18.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = $1[0m  [["event_id", 3]]
+  ↳ app/controllers/events_controller.rb:18:in `show'
+Completed 200 OK in 59ms (Views: 33.3ms | ActiveRecord: 18.8ms | Allocations: 1487)
+
+
+Started GET "/events" for ::1 at 2021-06-28 12:40:57 -0400
+Started GET "/comments" for ::1 at 2021-06-28 12:40:57 -0400
+Processing by EventsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/comments"):
+  
+  [1m[36mEvent Load (34.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 176ms (Views: 140.3ms | ActiveRecord: 34.4ms | Allocations: 21658)
+
+
+Started GET "/events" for ::1 at 2021-06-28 12:41:00 -0400
+Started GET "/auth/verify" for ::1 at 2021-06-28 12:41:00 -0400
+Started GET "/comments" for ::1 at 2021-06-28 12:41:00 -0400
+Processing by EventsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/comments"):
+  
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.7ms | Allocations: 9376)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 29ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 12010)
+
+
+Started GET "/events/4" for ::1 at 2021-06-28 12:41:03 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:52:in `set_event'
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = $1[0m  [["event_id", 4]]
+  ↳ app/controllers/events_controller.rb:18:in `show'
+Completed 200 OK in 118ms (Views: 62.4ms | ActiveRecord: 53.0ms | Allocations: 5300)
+
+

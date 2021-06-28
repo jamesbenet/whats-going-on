@@ -13,7 +13,7 @@ import {
   putEvent,
 } from "../services/events";
 
-import { getAllComments } from "../services/events";
+import { getAllComments, postComment } from "../services/comments";
 
 import "./MainContainer.css";
 
@@ -77,7 +77,7 @@ export default function MainContainer() {
           <EventDetail
             comments={comments}
             events={events}
-            handleCreateComment={handleCreateComment}
+            handleCreateComment={handleCommentCreate}
             handleDelete={handleDelete}
           />
         </Route>
