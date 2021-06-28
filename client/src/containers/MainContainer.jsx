@@ -13,19 +13,19 @@ import {
   putEvent,
 } from "../services/events";
 
-import { getAllComments } from "../services/events"
+import { getAllComments } from "../services/events";
 
 import "./MainContainer.css";
 
 export default function MainContainer() {
   const [events, setEvents] = useState([]);
-  const [comments, setComments] = useState([])
+  const [comments, setComments] = useState([]);
   const history = useHistory();
 
   useEffect(() => {
     const fetchEvents = async () => {
       const eventList = await getAllEvents();
-      setEvents(eventList)
+      setEvents(eventList);
     };
     fetchEvents();
   }, []);
@@ -33,36 +33,34 @@ export default function MainContainer() {
   useEffect(() => {
     const fetchComments = async () => {
       const commentList = await getAllComments();
-      setComments(commentList)
+      setComments(commentList);
     };
     fetchComments();
   }, []);
 
   const handleCreate = async (formData) => {
-    const eventItem = await postEvent(formData)
-    setEvents((prevState) => [...prevState, eventItem])
-    history.push("/events")
+    const eventItem = await postEvent(formData);
+    setEvents((prevState) => [...prevState, eventItem]);
+    history.push("/events");
   };
 
   const handleCommentCreate = async (formData) => {
-    const commentItem = await postComment(formData)
-    setComments((prevState) => [...prevState, commentItem])
+    const commentItem = await postComment(formData);
+    setComments((prevState) => [...prevState, commentItem]);
     // history.push("/events")
   };
 
-
-
   const handleUpdate = async (id, formData) => {
-    const eventItem = await putEvent(id, formData)
+    const eventItem = await putEvent(id, formData);
     setEvents((prevState) =>
       prevState.map((event) => {
-        return event.id === Number(id) ? eventItem : event
+        return event.id === Number(id) ? eventItem : event;
       })
     );
-    history.push("/events")
+    history.push("/events");
   };
   const handleDelete = async (id) => {
-    await deleteEvent(id)
+    await deleteEvent(id);
     setEvents((prevState) => prevState.filter((event) => event.id !== id));
   };
 
@@ -76,7 +74,12 @@ export default function MainContainer() {
           <EventCreate handleCreate={handleCreate} />
         </Route>
         <Route path="/events/:id">
-          <EventDetail events={events} handleDelete={handleDelete} />
+          <EventDetail
+            comments={comments}
+            events={events}
+            handleCreateComment={handleCreateComment}
+            handleDelete={handleDelete}
+          />
         </Route>
 
         <Route path="/events">

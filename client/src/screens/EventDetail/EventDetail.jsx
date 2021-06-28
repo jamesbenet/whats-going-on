@@ -9,7 +9,7 @@ export default function EventDetail(props) {
   const [isLoaded, setLoaded] = useState(false)
   const { id } = useParams()
   // const history = useHistory();
-  const { handleDelete } = props
+  const { handleCommentCreate, handleDelete, comments } = props
 
   useEffect(() => {
     const fetchEvent = async () => {
@@ -57,7 +57,30 @@ export default function EventDetail(props) {
         Delete
       </Link>
 
-      <div className = "comments-section-div">
+      <div className="comments-section-div">
+        <form
+          className="add-comment-form"
+          onSubmit={(e) => {
+            e.preventDefault()
+            handleCommentCreate(formData)
+          }}
+        >
+          <h3>Leave a comment:</h3>
+          <label>
+            Comment:
+            <input
+              type="text"
+              placeholder="One lonely Beastie I be,
+                All by myself without nobody"
+              name="comment"
+              value={comment}
+              onChange={handleChange}
+            />
+          </label>
+          <button>Submit</button>
+        </form>    
+
+
 
       </div>
       
