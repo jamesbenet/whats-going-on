@@ -6,18 +6,20 @@ export default function Events(props) {
   
 	return (
 		<div>
-			<h1>Upcoming Events</h1>
+      <h1>Upcoming Events</h1>
+      <Link to='/events/new'>
+				<button>Add a new event</button>
+			</Link>
+      
 			{events.map((event) => (
 				<Fragment key={event.id}>
 					<Link to={`/events/${event.id}`}>
-						<p>{event.performer_name}</p>
+            <div>{event.performer_name}</div>
+            <div>{event.date}</div>
+            <div>{event.venue_location}</div>
 					</Link>
 				</Fragment>
 			))}
-			<br />
-			<Link to='/events/new'>
-				<button>Create</button>
-			</Link>
 		</div>
 	);
 }

@@ -1,3 +1,25 @@
 header {
   background-color: blueviolet;
 }
+
+h1 {
+  text-align: left;
+}
+
+
+/* .layout-header-div {
+  display: flex;
+  flex-direction:column;
+}
+
+.nav-whats-going-on{
+  display: flex;
+flex-direction: row; }
+
+.nav-greeting-and-logout{
+  display: flex;
+}
+
+.nav-links{
+  display: flex;
+} */

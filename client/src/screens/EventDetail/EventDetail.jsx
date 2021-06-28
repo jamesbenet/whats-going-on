@@ -14,6 +14,7 @@ export default function EventDetail(props) {
     comment: "",
   })
   const { comment } = formData
+  
   useEffect(() => {
     const fetchEvent = async () => {
       const event = await getOneEvent(id)
@@ -73,7 +74,7 @@ export default function EventDetail(props) {
           className="add-comment-form"
           onSubmit={(e) => {
             e.preventDefault()
-            handleCommentCreate(formData)
+            handleCommentCreate(id, formData)
           }}
         >
           <h3>Leave a comment:</h3>
@@ -89,7 +90,12 @@ export default function EventDetail(props) {
             />
           </label>
           <button>Submit</button>
-        </form>    
+        </form>
+        {
+          event.comments.map((comment) => (
+            <p>{comment.comment}</p>
+            ))
+        }
 
 
 

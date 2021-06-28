@@ -44,10 +44,10 @@ export default function MainContainer() {
     history.push("/events");
   };
 
-  const handleCommentCreate = async (formData) => {
-    const commentItem = await postComment(formData);
+  const handleCommentCreate = async (id, formData) => {
+    const commentItem = await postComment(id, formData);
     setComments((prevState) => [...prevState, commentItem]);
-    // history.push("/events")
+    history.push("/events")
   };
 
   const handleUpdate = async (id, formData) => {
@@ -77,7 +77,7 @@ export default function MainContainer() {
           <EventDetail
             comments={comments}
             events={events}
-            handleCreateComment={handleCommentCreate}
+            handleCommentCreate={handleCommentCreate}
             handleDelete={handleDelete}
           />
         </Route>

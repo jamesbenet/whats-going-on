@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'
-  
+
+  resources :comments, except: :create
   resources :events do 
-    resources :comments
+    resources :comments, only: :create
   end
   resources :users, only: :create
 
