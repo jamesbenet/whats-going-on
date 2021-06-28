@@ -10,19 +10,24 @@ export default function Layout(props) {
         <h1>WhatsGoinOn</h1>
         {currentUser ? (
 					<>
-						<p>Hello, {currentUser.username}</p>
-						<button onClick={handleLogout}>Logout</button>
+            <div>Hello, {currentUser.username}
+            
+              <button onClick={handleLogout}>Logout</button>
+              </div>
 					</>
-				) : (
-        <Link to='/login'>Login/Register</Link>
+        ) : (
+            <div>
+            
+        <Link to='/login'>Login/Register</Link></div>
         )}
         
         {
           currentUser && 
-          <>
+          <><div>
             about performers
             <Link to='/events'>Events</Link>
             {/* <Link to='/performers'>Performers</Link>  */}
+            </div>
           </>
         }
       </header>

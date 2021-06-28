@@ -6837,3 +6837,55 @@ Processing by EventsController#show as HTML
 Completed 200 OK in 183ms (Views: 14.1ms | ActiveRecord: 28.5ms | Allocations: 3629)
 
 
+Started POST "/auth/login" for ::1 at 2021-06-28 17:30:54 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"jack", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (12.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jack"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 260ms (ActiveRecord: 81.1ms | Allocations: 3084)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/auth/login" for ::1 at 2021-06-28 17:31:03 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"jj", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jj"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 321ms (Views: 1.6ms | ActiveRecord: 3.4ms | Allocations: 816)
+
+
+Started POST "/auth/login" for ::1 at 2021-06-28 17:33:39 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"jj", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jj"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 200 OK in 391ms (Views: 87.0ms | ActiveRecord: 1.0ms | Allocations: 818)
+
+
+Started GET "/events" for ::1 at 2021-06-28 17:34:07 -0400
+Started GET "/comments" for ::1 at 2021-06-28 17:34:07 -0400
+Processing by EventsController#index as HTML
+Processing by CommentsController#index as HTML
+  [1m[36mEvent Load (33.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:10:in `index'
+Completed 200 OK in 71ms (Views: 33.2ms | ActiveRecord: 33.5ms | Allocations: 2531)
+
+
+  [1m[36mComment Load (2.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8:in `index'
+Completed 200 OK in 93ms (Views: 45.7ms | ActiveRecord: 44.4ms | Allocations: 5947)
+
+
+Started GET "/events/2" for ::1 at 2021-06-28 17:34:13 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (5.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:52:in `set_event'
+  [1m[36mComment Load (4.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = $1[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:18:in `show'
+Completed 200 OK in 31ms (Views: 14.3ms | ActiveRecord: 9.6ms | Allocations: 1509)
+
+
