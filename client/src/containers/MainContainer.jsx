@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 
-import Events from "../screens/Events";
+import Events from "../screens/Events/Events";
 import EventCreate from "../screens/EventCreate";
-import EventDetail from "../screens/EventDetail";
+import EventDetail from "../screens/EventDetail/EventDetail";
 import EventEdit from "../screens/EventEdit";
 
 import {
