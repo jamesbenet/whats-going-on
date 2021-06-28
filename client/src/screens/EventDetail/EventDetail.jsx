@@ -56,6 +56,10 @@ export default function EventDetail(props) {
       <Link to={`/events`} onClick={() => handleDelete(event.id)}>
         Delete
       </Link>
+
+      <div className = "comments-section-div">
+
+      </div>
       
       </div>
     // </Layout>
