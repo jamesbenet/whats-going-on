@@ -14,7 +14,7 @@ export default function EventDetail(props) {
     comment: "",
   })
   const { comment } = formData
-  
+
   useEffect(() => {
     const fetchEvent = async () => {
       const event = await getOneEvent(id)
@@ -39,16 +39,19 @@ export default function EventDetail(props) {
   return (
     // <Layout user={props.user}>
       <div className="event-detail-page">
+        
+        <div className="detail">
+        <div className="event-name"><h1>{event.event_name}</h1></div>
+        <div className="venue-name"><h3>@ {event.venue_name}</h3></div>
+        <div className="venue-location"><h2>{event.venue_location}</h2></div>
         <img
           className="event-detail-image"
           src={event.performer_img_url}
           alt={event.performer_name}
         />
-        <div className="detail">
-        <div className="event-name"><h1>{event.event_name}</h1></div>
-        <div className="venue-name"><h2>@ {event.venue_name}</h2></div>
-        <div className="venue-location">{event.venue_location}</div>
         <div className="performer-info"><p><b>About:</b> {event.performer_info}</p></div>
+        
+        
         
         <div className="performer-url">{event.performer_url}</div>
         

@@ -1,3 +1,4 @@
+import "./EventCreate.css";
 import { useState } from "react";
 
 export default function EventCreate(props) {
@@ -7,6 +8,7 @@ export default function EventCreate(props) {
     venue_name: "",
     venue_location: "",
     event_url: "",
+    date: "",
   });
 
   const {
@@ -15,6 +17,7 @@ export default function EventCreate(props) {
     venue_name,
     venue_location,
     event_url,
+    date
   } = formData
   
   const { handleCreate } = props;
@@ -27,7 +30,7 @@ export default function EventCreate(props) {
   };
 
   return (
-    <div>
+    <div className="event-create-page">
       <form
         className="add-event-form"
         onSubmit={(e) => {
@@ -47,7 +50,7 @@ export default function EventCreate(props) {
           />
         </label>
         <label>
-          Performer image:
+          Performer image URL:
           <input
             type="text"
             name="performer_img_url"
@@ -56,7 +59,7 @@ export default function EventCreate(props) {
           />
         </label>
         <label>
-          Name:
+          Name of venue:
           <input
             type="text"
             name="venue_name"
@@ -65,7 +68,7 @@ export default function EventCreate(props) {
           />
         </label>
         <label>
-          Name:
+          Location:
           <input
             type="text"
             name="venue_location"
@@ -74,11 +77,20 @@ export default function EventCreate(props) {
           />
         </label>
         <label>
-          Name:
+          Event URL:
           <input
             type="text"
             name="event_url"
             value={event_url}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Date:
+          <input
+            type="text"
+            name="date"
+            value={date}
             onChange={handleChange}
           />
         </label>

@@ -24,7 +24,7 @@ export default function Layout(props) {
         {
           currentUser && 
           <><div>
-            about performers
+            <Link to='/about'>About</Link>
             <Link to='/events'>Events</Link>
             {/* <Link to='/performers'>Performers</Link>  */}
             </div>

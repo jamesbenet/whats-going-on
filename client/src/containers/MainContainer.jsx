@@ -1,10 +1,12 @@
+import "./MainContainer.css";
 import { useState, useEffect } from "react";
 import { Switch, Route, useHistory } from "react-router-dom";
 
 import Events from "../screens/Events/Events";
-import EventCreate from "../screens/EventCreate";
+import EventCreate from "../screens/EventCreate/EventCreate";
 import EventDetail from "../screens/EventDetail/EventDetail";
 import EventEdit from "../screens/EventEdit";
+import About from "../screens/About/About";
 
 import {
   deleteEvent,
@@ -84,6 +86,9 @@ export default function MainContainer() {
 
         <Route path="/events">
           <Events events={events} />
+        </Route>
+        <Route path="/about">
+          <About />
         </Route>
       </Switch>
     </div>
