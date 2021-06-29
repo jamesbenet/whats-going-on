@@ -45565,3 +45565,23 @@ Processing by EventsController#show as HTML
 Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 0.5ms | Allocations: 1852)
 
 
+Started GET "/events/5" for ::1 at 2021-06-29 09:56:57 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (6.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:52:in `set_event'
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = $1[0m  [["event_id", 5]]
+  ↳ app/controllers/events_controller.rb:18:in `show'
+Completed 200 OK in 29ms (Views: 10.7ms | ActiveRecord: 7.8ms | Allocations: 1473)
+
+
+Started GET "/events/2" for ::1 at 2021-06-29 09:57:05 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:52:in `set_event'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = $1[0m  [["event_id", 2]]
+  ↳ app/controllers/events_controller.rb:18:in `show'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.8ms | Allocations: 1483)
+
+
