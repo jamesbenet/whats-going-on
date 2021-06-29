@@ -29,7 +29,7 @@ const handleChange = (e) => {
     <h3>Login</h3>
     <label>
       Username:
-       <input
+       <input className="login"
         type='text'
         name='username'
         value={username}
@@ -39,7 +39,7 @@ const handleChange = (e) => {
     <br />
     <label>
       Password:
-       <input
+       <input className="login"
         type='password'
         name='password'
         value={password}

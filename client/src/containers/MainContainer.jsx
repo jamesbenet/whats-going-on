@@ -49,7 +49,7 @@ export default function MainContainer() {
   const handleCommentCreate = async (id, formData) => {
     const commentItem = await postComment(id, formData);
     setComments((prevState) => [...prevState, commentItem]);
-    history.push("/events")
+    history.push("/events/:id")
   };
 
   const handleUpdate = async (id, formData) => {
