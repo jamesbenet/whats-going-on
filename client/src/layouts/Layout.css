@@ -1,3 +1,50 @@
 header {
-  background-color: blueviolet;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: blueviolet; */
 }
+
+/* h1 {
+  text-align: left;
+} */
+
+/* ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+ul li a{
+  text-decoration: none;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+ul li a:hover{
+  background-color: red;
+  color: #fff;
+}
+
+.active{
+  background-color: red;
+  color: #fff;
+} */
+
+
+/* .layout-header-div {
+  display: flex;
+  flex-direction:column;
+}
+
+.nav-whats-going-on{
+  display: flex;
+flex-direction: row; }
+
+.nav-greeting-and-logout{
+  display: flex;
+}
+
+.nav-links{
+  display: flex;
+} */

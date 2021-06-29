@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :update, :destroy]
   # user needs to be logged in to perform these methods
-  before_action :authorized_request, only: [:create, :update, :destroy]
+  before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET /events
   def index

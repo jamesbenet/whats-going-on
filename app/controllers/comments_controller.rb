@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :update, :destroy]
-
+  before_action :authorize_request, only: :create
   # GET /comments
   def index
     @comments = Comment.all
@@ -15,10 +15,11 @@ class CommentsController < ApplicationController
 
   # POST /comments
   def create
-    @comment = Comment.new(comment_params)
-
+    @event = Event.find(params[:event_id])
+    @comment = Comment.where(event_id: @event.id).new(comment_params)
+    @comment.user = @current_user
     if @comment.save
-      render json: @comment, status: :created, location: @comment
+      render json: @comment, status: :created, include: @comment.user
     else
       render json: @comment.errors, status: :unprocessable_entity
     end

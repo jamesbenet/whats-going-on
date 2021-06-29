@@ -1,0 +1,25 @@
+.performer-info {
+  max-width: 600px;
+  margin: auto;
+  width: 50%;
+}
+
+.event-detail-image {
+  max-width: 600px;
+}
+
+.venue-image-url {
+  max-width: 300px;
+}
+
+.performer-info p {
+  background-color: white;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+input {
+  width: 300px;
+  height: 200px; 
+  font-size: 14px;
+}
