@@ -8,3 +8,7 @@
   background-size: cover;
   filter: brightness(110%);
 }
+
+p {
+  color: white;
+}
