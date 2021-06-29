@@ -1,0 +1,15 @@
+.performer-info {
+  max-width: 600px;
+  margin: auto;
+  width: 50%;
+}
+
+.event-detail-image {
+  max-width: 600px;
+}
+
+.performer-info p {
+  background-color: white;
+  font-size: 18px;
+  line-height: 24px;
+}

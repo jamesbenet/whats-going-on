@@ -1,0 +1,138 @@
+div.event-create-page {
+  display: flex;
+  flex-flow: column wrap;
+  background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.25),
+      rgba(255, 255, 255, 1)
+    ),
+    url(https://images.unsplash.com/photo-1604364260242-1156640c0dfb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1867&q=80);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 85vh;
+  margin: 10px 0;
+  align-content: space-evenly;
+}
+
+.add-event-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 50%;
+  height: 100%;
+}
+
+.add-event-form form{
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto; */
+}
+
+/* 
+.add-vendor-info,
+.add-vendor-form {
+  width: 450px;
+}
+.add-vendor-info,
+.add-vendor-form,
+.add-vendor-button-box {
+  font-family: "Montserrat", sans-serif;
+  flex-direction: column;
+  justify-content: center;
+}
+.add-vendor-info {
+  margin: 60px auto 0;
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+}
+.add-vendor-form {
+  margin: 60px 60px 0 0;
+}
+.add-vendor-name,
+.add-vendor-description,
+.add-vendor-image,
+.add-vendor-hours,
+.add-vendor-button {
+  font-weight: bold;
+  color: #000000;
+  margin: 5px 0;
+  padding: 13px 0;
+  border: 1px solid #000000;
+  background-color: rgba(255, 255, 255, 1);
+}
+.add-vendor-name {
+  font-size: 36px;
+  width: 450px;
+  margin-top: 0;
+}
+.add-vendor-description,
+.add-vendor-image,
+.add-vendor-hours,
+.add-vendor-button {
+  font-size: 20px;
+  width: 450px;
+}
+.add-vendor-name::placeholder,
+.add-vendor-description::placeholder,
+.add-vendor-image::placeholder,
+.add-vendor-hours::placeholder {
+  color: #000000;
+}
+input.add-vendor-name,
+textarea.add-vendor-description,
+input.add-vendor-image,
+input.add-vendor-hours {
+  padding-left: 10px;
+}
+.add-vendor-button-box,
+button.add-vendor-button {
+  width: 225px;
+  justify-content: center;
+}
+.add-vendor-button-box {
+  margin: 15px auto 15px;
+}
+button.add-vendor-button {
+  background-color: rgba(249, 87, 28, 0.65);
+  font-size: 23px;
+  text-align: center;
+  border: none;
+}
+button.add-vendor-button:hover {
+  background-color: rgba(249, 87, 28, 0.9);
+}
+/*==========================
+  Responsive Design
+==========================*/
+/* @media screen and (max-width: 970px) {
+  div.add-vendor {
+    height: auto;
+  }
+
+  .add-vendor-info,
+  .add-vendor-form,
+  .add-vendor-name,
+  .add-vendor-description,
+  .add-vendor-image,
+  .add-vendor-hours {
+    width: 85vw;
+  }
+
+  .add-vendor-form {
+    margin: 60px 0 0;
+  }
+
+  .add-vendor-button-box,
+  button.add-vendor-button {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  button.add-vendor-button {
+    background-color: rgba(249, 87, 28, 0.9);
+  }
+} */ 
